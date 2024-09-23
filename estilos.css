@@ -1,0 +1,152 @@
+header {
+    background-color: #031b36;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 12px 12px;
+    margin: 10px 10px;  /* Espacio entre los botones */
+    background-color: #031b36;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    
+}
+
+nav a:hover {
+    background-color: #052952;  /* Efecto al pasar el mouse */
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Añadir desplazamiento suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilo para las secciones */
+section {
+    height: 30vh; /* Ocupa toda la altura de la ventana */
+    padding: 80px 20px; /* Espacio superior para que no se superponga con el header */
+    background-color: #052952;
+    text-align: center;
+}
+
+#Inicio {
+    background-color: #052952;
+    height: auto;
+padding: 130px;
+}
+
+#Conocimientos {
+    background-color: #052952;
+}
+
+#Proyectos{
+    background-color: #052952;
+    height: auto;
+
+}
+#Redes {
+    background-color: #052952;
+    height: auto;
+    
+    }
+
+#Formulario {
+background-color: #052952;
+height: auto;
+padding: 20px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #052952;
+    color: white;
+}
+
+.tech-list{
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente (si hay más altura) */
+    gap: 25px; /* Espacio entre imágenes */
+}
+
+/* Estilo para las imágenes */
+.imagen {
+    width: auto; /* Ajusta el ancho de las imágenes */
+    height: 100px ;
+}
+textarea {
+    width: 300px;  /* Ancho fijo */
+    height: 150px; /* Alto fijo */
+    padding: 10px; /* Espacio interno */
+    font-size: 12px; /* Tamaño de fuente */
+    resize: none; /* Desactivar redimensionamiento */
+    overflow: visible; /* Mostrar barras desplazadoras cuando sea necesario */
+}
+.libre-baskerville-regular {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .libre-baskerville-bold {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+
+  .contenedorColumnas {
+    display: flex; /* Alinea los contenedores hijos horizontalmente */
+    justify-content: center; /* Espacio entre columnas */
+    margin: 20px; /* Espacio alrededor del contenedor principal */
+}
+  .columnas {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+    margin: 20px; /* Espacio alrededor del contenedor */
+}
+
+.botonRedes {
+
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center;
+    background-color: #0077b5; /* Color de fondo para el botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+.botonRedes img {
+    width: 50px; /* Ancho del ícono */
+    height: 50px; /* Alto del ícono */
+    
+}

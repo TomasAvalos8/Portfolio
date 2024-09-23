@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="codigos.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body class="libre-baskerville-regular " style="color: white;">
+    <header>
+        <h1 class="libre-baskerville-bold" style="margin-left: 20px;color: white;">Portfolio Personal</h1>
+        <nav>
+            <ul>
+                <li><a href="#Inicio">Inicio</a></li>
+                <li><a href="#Conocimientos">Conocimientos</a></li>
+                <li><a href="#Proyectos">Proyectos</a></li>
+                <li><a href="#Redes">Redes</a></li>
+                <li><a href="#Formulario">Contacto</a></li>
+                
+                
+            </ul>
+        </nav>
+    </header>
+
+    <section id="Inicio">
+        <div>
+            <img style="height: 150px;" src="FotoPresentacion.png" alt="FotoPresentacion">
+        </div>
+        <div>           
+        <h2>Sobre Mi</h2>
+        </div>
+        <div>
+            <p style="width: 50%; margin:auto;">Hola, mi nombre es Tomas Avalos. Actualmente, estoy estudiando la tecnicatura universitaria en programación en la Universidad Tecnológica Nacional (FRGP). A lo largo de mi formación, desarrollé habilidades en lenguajes como HTML, CSS, JavaScript, C++, y C#. Además, soy programador de tornos CNC con controlador Fanuc. Estoy enfocado en aplicar mis conocimientos para resolver problemas reales y seguir aprendiendo en el campo de la programación y la tecnología.</p>
+        </div>
+
+    </section>
+    
+    <section id="Conocimientos">
+<h1>Mis Conocimientos</h1>
+<div class="tech-list">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML" class="imagen" >
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS" class="imagen">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JS" class="imagen">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++" class="imagen">
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg" alt="C#" class="imagen">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL" class="imagen">
+
+</div>
+    </section>
+    <section id="Proyectos">
+        <div>
+            <h1>Mis Proyectos</h1>
+        </div>
+        <div class="contenedorColumnas">
+            <div class="columnas">
+                <p>--Sistema de gestión de artículos--</p>
+                <img src="imagenAppGestionArticulos.jpg" alt="GestionArticulos" style="height: 150px; margin: 20px 0;">
+                <button  onclick="Redes('https://github.com/TomasAvalos8/Proyecto-winform.git')">Ver código en GitHub</button>
+            </div>
+            
+        </div>
+    </section>
+    <section id="Redes">
+<div>
+    <h1>Mis Redes</h1>
+</div>
+
+
+    <button class="botonRedes" onclick="Redes('https://www.linkedin.com/in/tomas-avalos-786a00210/')">
+        <img src="https://img.freepik.com/vector-premium/logo-linkedin_578229-227.jpg?w=740" alt="Linkedin">
+    </button>
+    <button class="botonRedes" onclick="Redes('https://www.instagram.com/tomiiavalos/')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram"> 
+    </button>
+    <button class="botonRedes" onclick="Redes('https://github.com/TomasAvalos8')">
+        <img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png" alt="GitHub"> 
+
+    
+
+
+
+    </section>
+    <section id="Formulario">
+        <h2 style="color: white;">Formulario de Contacto</h2>
+        <div>
+            <label for="" style="color: white; margin-bottom: 10px; margin-top: 20px;">Ingrese su Nombre</label>
+            
+        </div>
+        <div>
+            <input type="text" id="txtNombre" placeholder="Nombre Apellido" style=" margin-bottom: 10px; margin-top: 10px;border-radius: 4px;">  
+        </div>
+        <div>
+            <label for="" style="color: white;margin-bottom: 10px; margin-top: 10px;">Ingrese su Email</label>
+        </div>
+        <div>
+            <input type="text" id="txtEmail" placeholder="nombre@ejemplo.com" style="border-radius: 4px;margin-bottom: 10px; margin-top: 10px;">  
+        </div>
+        <div>
+            <label for="" style="color: white;margin-bottom: 10px; margin-top: 10px;">Ingrese su Mensaje</label>
+        </div>
+        <div>
+            <textarea name="" id="" style="border-radius: 4px; margin-top: 10px;" class="libre-baskerville-regular"></textarea>
+        </div>
+    </section>
+    <footer></footer>
+</body>
+</html>
