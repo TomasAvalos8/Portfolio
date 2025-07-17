@@ -46,6 +46,7 @@ nav ul li a {
 /* Añadir desplazamiento suave */
 html {
     scroll-behavior: smooth;
+    margin:0;
 }
 
 /* Estilo para las secciones */
