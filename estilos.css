@@ -1,30 +1,51 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
 header {
-    background-color: #031b36;
-    padding: 0px;
+    background-color: #001a2c;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     position: fixed;
     top: 0;
+    height: 10vh;
     width: 100%;
     z-index: 1000;
     align-items: center;
 }
 
-nav a {
+h2,h3{
+color: #5FA8D3;
+}
+
+a {
     color: white;
     text-decoration: none;
-    font-size: 15px;
+}
+
+nav a {
+    font-size: 1.2rem;
     padding: 12px 12px;
-    margin: 10px 10px;  /* Espacio entre los botones */
-    background-color: #031b36;
+    margin: 10px 10px;
+    /* Espacio entre los botones */
     border-radius: 5px;
     transition: background-color 0.3s;
-    
+
 }
 
 nav a:hover {
-    background-color: #052952;  /* Efecto al pasar el mouse */
+    background-color: #062247;
 }
+
 nav ul {
     list-style: none;
     margin: 0;
@@ -43,114 +64,269 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Añadir desplazamiento suave */
-html {
-    scroll-behavior: smooth;
-    margin:0;
-}
-body{
-    margin:0;
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 80px 20px;
+    background-color: #031b36;
+    text-align: center;
 }
 
-/* Estilo para las secciones */
-section {
-    height: 30vh; /* Ocupa toda la altura de la ventana */
-    padding: 80px 20px; /* Espacio superior para que no se superponga con el header */
-    background-color: #052952;
-    text-align: center;
+.Flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.FlexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.FlexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.ContenedorFoto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    position: relative;
+}
+
+.ContenedorFoto img {
+    width: 200px;
+    /* Tamaño fijo */
+    height: auto;
+    /* Mantiene proporción */
+    object-fit: cover;
+    /* Recorta si es necesario para encajar */
+    position: relative;
+    /* Fija la posición dentro del contenedor */
+    border-radius: 10px;
 }
 
 #Inicio {
-    background-color: #052952;
-    height: auto;
-padding: 130px;
+    gap: 250px;
 }
 
-#Conocimientos {
-    background-color: #052952;
+#Inicio a :hover {
+    background-color: #003f88;
+}
+.ContenedorRedes img
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 25%;
+    padding: 5px;
 }
 
-#Proyectos{
-    background-color: #052952;
-    height: auto;
-
+#SobreMi {
+    justify-content: center;
+    gap: 2rem;
 }
-#Redes {
-    background-color: #052952;
-    height: auto;
-    
-    }
+
+#Informacion{
+width: 50%;
+}
+
+#Inicio h3 {
+    color: #5FA8D3;
+}
+
+.btnCeleste {
+    font-family: Nunito;
+    color: white;
+    padding: 10px;
+    background-color: #5fa8d3;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btnCeleste:hover {
+    box-shadow: -4px 4px 8px rgba(0, 173, 255, 0.3);
+    transform: translate(2px, -2px);
+}
+
+.btnBlanco {
+    font-family: Nunito;
+    color: black;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btnBlanco:hover{
+    box-shadow: -4px 4px 8px rgba(0, 173, 255, 0.3);
+    transform: translate(2px, -2px);
+}
+
+#Contacto {
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
 
 #Formulario {
-background-color: #052952;
-height: auto;
-padding: 20px;
+    height: 80vh;
+    width: 100%;
+    padding: 0;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#Formulario form {
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    max-width: 600px;
+    min-width: 200px;
 }
 
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #052952;
+#Formulario input,
+#Formulario textarea {
+    font-family: Nunito;
+    font-size: 1rem;
+    width: 100%;
+    color:white;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 2px solid white;
+    background-color: transparent;
+    padding: 5px;
+}
+
+#Formulario input:focus,
+#Formulario textarea:focus {
+    outline: none;
+    border-color: #ccc;
+}
+
+textarea::placeholder,
+input::placeholder {
+    font-family: Nunito;
+    font-size: 1rem;
     color: white;
 }
 
-.tech-list{
+#Redes {
+    align-items: start;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+    
+}
+
+#Redes a,
+#Redes span{
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente (si hay más altura) */
-    gap: 25px; /* Espacio entre imágenes */
+    align-items: center;
+}
+
+#Redes img,
+#Redes i {
+    width: 40px;
+    height: 40px;
+    border-radius: 25%;
+    padding: 5px;
+}
+
+#Redes span {
+    height: auto;
+}
+
+#Redes a :hover {
+    background-color: #003f88;
+}
+
+
+
+footer {
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    padding: 1rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #031b36;
+    color: white;
+}
+
+.tech-list {
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente (si hay más altura) */
+    gap: 25px;
+    /* Espacio entre imágenes */
 }
 
 /* Estilo para las imágenes */
 .imagen {
-    width: auto; /* Ajusta el ancho de las imágenes */
-    height: 100px ;
+    width: auto;
+    /* Ajusta el ancho de las imágenes */
+    height: 100px;
 }
+
 textarea {
-    width: 300px;  /* Ancho fijo */
-    height: 150px; /* Alto fijo */
-    padding: 10px; /* Espacio interno */
-    font-size: 12px; /* Tamaño de fuente */
-    resize: none; /* Desactivar redimensionamiento */
-    overflow: visible; /* Mostrar barras desplazadoras cuando sea necesario */
+   height: 25vh;
+    resize: none;
+    /* Desactivar redimensionamiento */
+    overflow: visible;
+    /* Mostrar barras desplazadoras cuando sea necesario */
 }
+
 .libre-baskerville-regular {
-    font-family: "Libre Baskerville", serif;
+    font-family: "Nunito", serif;
     font-weight: 400;
     font-style: normal;
+}
+
+
+.carousel {
+  overflow: hidden;
+  width: 50%;
+  padding: 2rem 0;
+}
+
+.carousel-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll 30s linear infinite;
+}
+
+.carousel img {
+  height: 5rem; 
+  width: auto; 
+  object-fit: contain; 
+  transition: transform 0.3s;
+  display: block;   
+  flex: 0 0 auto;
+  margin: 0 20px; 
+}
+
+.carousel img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
   }
-  
-  .libre-baskerville-bold {
-    font-family: "Libre Baskerville", serif;
-    font-weight: 700;
-    font-style: normal;
+  100% {
+    transform: translateX(-50%);
   }
-  
-
-  .contenedorColumnas {
-    display: flex; /* Alinea los contenedores hijos horizontalmente */
-    justify-content: center; /* Espacio entre columnas */
-    margin: 20px; /* Espacio alrededor del contenedor principal */
-}
-  .columnas {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra los elementos horizontalmente */
-    margin: 20px; /* Espacio alrededor del contenedor */
-}
-
-.botonRedes {
-
-    align-items: center; /* Centra verticalmente el contenido */
-    justify-content: center;
-    background-color: #0077b5; /* Color de fondo para el botón */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    border-radius: 4px; /* Bordes redondeados */
-}
-
-.botonRedes img {
-    width: 50px; /* Ancho del ícono */
-    height: 50px; /* Alto del ícono */
-    
 }

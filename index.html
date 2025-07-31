@@ -1,113 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon.ico">
     <link rel="stylesheet" href="estilos.css">
     <script src="codigos.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
+
 <body class="libre-baskerville-regular " style="color: white;">
     <header>
-        <h1 class="libre-baskerville-bold" style="margin-left: 20px;color: white;">Portfolio Personal</h1>
+        <a href="#Inicio">
+            <h1 style="margin-left: 20px;color: white;">Tomas Avalos</h1>
+        </a>
         <nav>
             <ul>
-                <li><a href="#Inicio">Inicio</a></li>
-                <li><a href="#Conocimientos">Conocimientos</a></li>
+                <li><a href="#SobreMi">Sobre mi</a></li>
                 <li><a href="#Proyectos">Proyectos</a></li>
-                <li><a href="#Redes">Redes</a></li>
                 <li><a href="#Formulario">Contacto</a></li>
-                
-                
             </ul>
         </nav>
     </header>
 
-    <section id="Inicio">
-        <div>
-            <img style="height: 150px;" src="FotoPresentacion.png" alt="FotoPresentacion">
+    <section id="Inicio" class="FlexRow">
+        <div class="ContenedorFoto">
+            <img src="img/FotoCVCortada.jpg" alt="FotoPresentacion">
         </div>
-        <div>           
-        <h2>Sobre Mi</h2>
-        </div>
-        <div>
-            <p style="width: 50%; margin:auto;">Hola, mi nombre es Tomas Avalos. Actualmente, estoy estudiando la tecnicatura universitaria en programación en la Universidad Tecnológica Nacional (FRGP). A lo largo de mi formación, desarrollé habilidades en lenguajes como HTML, CSS, JavaScript, C++, y C#. Además, soy programador de tornos CNC con controlador Fanuc. Estoy enfocado en aplicar mis conocimientos para resolver problemas reales y seguir aprendiendo en el campo de la programación y la tecnología.</p>
+        <div class="FlexColumn">
+            <h3>Hola, soy</h3>
+            <h2 style="color: white;">TOMAS AVALOS</h2>
+            <h3>Tecnico Programador</h3>
+            <div style="padding: 1rem; gap: 1rem;" class="FlexRow">
+                <a href="Curriculum.pdf" target="_blank" rel="noopener noreferrer" class="btnCeleste">Descarga mi CV</a>
+                <a href="#Formulario" class="btnBlanco">Contactarme</a>
+            </div>
+            <div class="ContenedorRedes">
+                <a href="https://www.linkedin.com/in/tomas-avalos" target="_blank" rel="noopener">
+                    <img src="img/linkedin.svg" alt="LinkedIn">
+                </a>
+
+                <a href="https://github.com/TomasAvalos8" target="_blank" rel="noopener">
+                    <img src="img/github.svg" alt="GitHub">
+                </a>
+
+            </div>
+
         </div>
 
     </section>
-    
-    <section id="Conocimientos">
-<h1>Mis Conocimientos</h1>
-<div class="tech-list">
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML" class="imagen" >
-<img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS" class="imagen">
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JS" class="imagen">
-<img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++" class="imagen">
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg" alt="C#" class="imagen">
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL" class="imagen">
+    <section id="SobreMi" class="FlexColumn">
 
-</div>
+        <h2>Sobre Mi</h2>
+        <div id="Informacion" class="FlexRow">
+
+
+            <p style="font-size: 1.1rem;">Me recibí de la Tecnicatura Universitaria en Programación en la UTN (FRGP) y
+                me apasiona mucho el mundo del desarrollo de software. Me gusta aprender y experimentar con todo lo
+                relacionado al backend, el frontend y el manejo de bases de datos, tratando de entender cómo encajan
+                todas las piezas para crear soluciones completas. Siempre estoy buscando mejorar, aprender nuevas
+                herramientas y encontrar formas más claras y eficientes de desarrollar. Mi objetivo es aplicar lo que sé
+                para resolver problemas reales, crecer profesionalmente y seguir disfrutando este camino dentro del
+                mundo de la tecnología.</p>
+        </div>
+
+        <h3>Mis Conocimientos Técnicos</h3>
+        <div class="carousel">
+            <div class="carousel-track">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg" alt="C#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Microsoft_.NET_logo.svg/640px-Microsoft_.NET_logo.svg.png"
+                    alt=".NET">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" alt="Git">
+                <img src="https://www.vectorlogo.zone/logos/java/java-ar21.svg" alt="Java">
+
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg" alt="C#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Microsoft_.NET_logo.svg/640px-Microsoft_.NET_logo.svg.png"
+                    alt=".NET">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" alt="Git">
+                <img src="https://www.vectorlogo.zone/logos/java/java-ar21.svg" alt="Java">
+            </div>
+        </div>
     </section>
     <section id="Proyectos">
         <div>
-            <h1>Mis Proyectos</h1>
+            <h2>Mis Proyectos</h2>
         </div>
-        <div class="contenedorColumnas">
-            <div class="columnas">
+        <div class="FlexRow">
+            <div class="FlexColumn">
                 <p>--Sistema de gestión de artículos--</p>
-                <img src="imagenAppGestionArticulos.jpg" alt="GestionArticulos" style="height: 150px; margin: 20px 0;">
-                <button  onclick="Redes('https://github.com/TomasAvalos8/Proyecto-winform.git')">Ver código en GitHub</button>
+                <img src="img/imagenAppGestionArticulos.jpg" alt="GestionArticulos"
+                    style="height: 150px; margin: 20px 0;">
+                <button onclick="Redes('https://github.com/TomasAvalos8/Proyecto-winform.git')">Ver código en
+                    GitHub</button>
             </div>
-            
+
         </div>
     </section>
-    <section id="Redes">
-<div>
-    <h1>Mis Redes</h1>
-</div>
 
+    <section id="Formulario" class="FlexColumn">
+        <h2>Mis Redes y Contacto</h2>
+        <div id="Contacto" class="FlexRow">
+            <div id="Redes" class="FlexColumn">
 
-    <button class="botonRedes" onclick="Redes('https://www.linkedin.com/in/tomas-avalos-786a00210/')">
-        <img src="https://img.freepik.com/vector-premium/logo-linkedin_578229-227.jpg?w=740" alt="Linkedin">
-    </button>
-    <button class="botonRedes" onclick="Redes('https://www.instagram.com/tomiiavalos/')">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram"> 
-    </button>
-    <button class="botonRedes" onclick="Redes('https://github.com/TomasAvalos8')">
-        <img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png" alt="GitHub"> 
-
-    
-
-
-
-    </section>
-    <section id="Formulario">
-        <h2 style="color: white;">Formulario de Contacto</h2>
-        <div>
-            <label for="" style="color: white; margin-bottom: 10px; margin-top: 20px;">Ingrese su Nombre</label>
-            
-        </div>
-        <div>
-            <input type="text" id="txtNombre" placeholder="Nombre Apellido" style=" margin-bottom: 10px; margin-top: 10px;border-radius: 4px;">  
-        </div>
-        <div>
-            <label for="" style="color: white;margin-bottom: 10px; margin-top: 10px;">Ingrese su Email</label>
-        </div>
-        <div>
-            <input type="text" id="txtEmail" placeholder="nombre@ejemplo.com" style="border-radius: 4px;margin-bottom: 10px; margin-top: 10px;">  
-        </div>
-        <div>
-            <label for="" style="color: white;margin-bottom: 10px; margin-top: 10px;">Ingrese su Mensaje</label>
-        </div>
-        <div>
-            <textarea name="" id="" style="border-radius: 4px; margin-top: 10px;" class="libre-baskerville-regular"></textarea>
+                <div class="Flex">
+                    <a href="https://www.linkedin.com/in/tomas-avalos" target="_blank" rel="noopener">
+                        <img src="img/linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <span>Linkedin</span>
+                </div>
+                <div class="Flex">
+                    <a href="https://github.com/TomasAvalos8" target="_blank" rel="noopener">
+                        <img src="img/github.svg" alt="GitHub">
+                    </a>
+                    <span>GitHub</span>
+                </div>
+            </div>
+            <form action="" method="post" class="FlexColumn">
+                <input type="text" name="nombre" id="nombre" placeholder="  Nombre" required>
+                <input type="email" name="email" id="email" placeholder="   Email" required>
+                <textarea name="mensaje" id="mensaje" placeholder=" Mensaje" required></textarea>
+                <button class="btnBlanco">Enviar</button>
+            </form>
         </div>
     </section>
-    <footer></footer>
+    <footer>
+        <h4>© 2025 Todos los derechos reservados. | Diseñado y desarrollado por Tomas Avalos. </h2>
+    </footer>
 </body>
+
 </html>
