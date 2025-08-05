@@ -23,8 +23,9 @@ header {
     align-items: center;
 }
 
-h2,h3{
-color: #5FA8D3;
+h2,
+h3 {
+    color: #5FA8D3;
 }
 
 a {
@@ -66,14 +67,14 @@ nav ul li a {
 
 section {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    min-height: 100vh;
     padding: 80px 20px;
     background-color: #031b36;
     text-align: center;
 }
+
 
 .Flex {
     display: flex;
@@ -89,7 +90,11 @@ section {
 .FlexColumn {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
+
 
 .ContenedorFoto {
     display: flex;
@@ -111,15 +116,109 @@ section {
     border-radius: 10px;
 }
 
+.contenedorCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.cardFlex {
+    flex: 0 1 500px;
+    border-radius: 5px;
+    color: black;
+    overflow: hidden;
+}
+
+.cardFlex ul {
+    display: flex;
+    width: 400%;
+    animation: slide 20s infinite alternate ease-in-out;
+}
+
+.cardFlex li {
+    width: 100%;
+    list-style: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.cardFlex li img {
+    transition: filter 0.3s ease;
+}
+
+.cardFlex li:hover img {
+    filter: brightness(40%);
+}
+
+.texto-card {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.cardFlex li:hover .texto-card {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.card-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+@keyframes slide {
+    0% {
+        margin-left: 0;
+    }
+
+    20% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -300%;
+    }
+}
+
 #Inicio {
     gap: 250px;
 }
 
-#Inicio a :hover {
+#Inicio a img:hover {
     background-color: #003f88;
 }
-.ContenedorRedes img
-{
+
+.ContenedorRedes img {
     width: 40px;
     height: 40px;
     border-radius: 25%;
@@ -131,8 +230,8 @@ section {
     gap: 2rem;
 }
 
-#Informacion{
-width: 50%;
+#Informacion {
+    width: 50%;
 }
 
 #Inicio h3 {
@@ -166,7 +265,7 @@ width: 50%;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.btnBlanco:hover{
+.btnBlanco:hover {
     box-shadow: -4px 4px 8px rgba(0, 173, 255, 0.3);
     transform: translate(2px, -2px);
 }
@@ -178,7 +277,7 @@ width: 50%;
 }
 
 #Formulario {
-    height: 80vh;
+    min-height: 80vh;
     width: 100%;
     padding: 0;
     justify-content: space-evenly;
@@ -199,7 +298,7 @@ width: 50%;
     font-family: Nunito;
     font-size: 1rem;
     width: 100%;
-    color:white;
+    color: white;
     margin: 10px 0;
     border-radius: 4px;
     border: 2px solid white;
@@ -225,11 +324,11 @@ input::placeholder {
     justify-content: center;
     padding: 1rem;
     gap: 1rem;
-    
+
 }
 
 #Redes a,
-#Redes span{
+#Redes span {
     display: flex;
     align-items: center;
 }
@@ -264,25 +363,11 @@ footer {
     color: white;
 }
 
-.tech-list {
-    display: flex;
-    justify-content: center;
-    /* Centra horizontalmente */
-    align-items: center;
-    /* Centra verticalmente (si hay más altura) */
-    gap: 25px;
-    /* Espacio entre imágenes */
-}
 
-/* Estilo para las imágenes */
-.imagen {
-    width: auto;
-    /* Ajusta el ancho de las imágenes */
-    height: 100px;
-}
+
 
 textarea {
-   height: 25vh;
+    height: 25vh;
     resize: none;
     /* Desactivar redimensionamiento */
     overflow: visible;
@@ -297,36 +382,37 @@ textarea {
 
 
 .carousel {
-  overflow: hidden;
-  width: 50%;
-  padding: 2rem 0;
+    overflow: hidden;
+    width: 50%;
+    padding: 2rem 0;
 }
 
 .carousel-track {
-  display: flex;
-  width: fit-content;
-  animation: scroll 30s linear infinite;
+    display: flex;
+    width: fit-content;
+    animation: scroll 25s linear infinite;
 }
 
 .carousel img {
-  height: 5rem; 
-  width: auto; 
-  object-fit: contain; 
-  transition: transform 0.3s;
-  display: block;   
-  flex: 0 0 auto;
-  margin: 0 20px; 
+    height: 5rem;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s;
+    display: block;
+    flex: 0 0 auto;
+    margin: 0 20px;
 }
 
 .carousel img:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 @keyframes scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
