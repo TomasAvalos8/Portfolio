@@ -140,7 +140,7 @@ section {
 }
 
 .cardFlex li,
-.cardFlex img{
+.cardFlex img {
     width: 100%;
     list-style: none;
     position: relative;
@@ -152,8 +152,8 @@ section {
     transition: filter 0.3s ease;
 }
 
-.cardFlex li:hover img, 
-.cardFlex:hover img{
+.cardFlex li:hover img,
+.cardFlex:hover img {
     filter: brightness(30%);
 }
 
@@ -237,6 +237,7 @@ section {
 #SobreMi {
     justify-content: center;
     gap: 2rem;
+    padding-top: 120px;
 }
 
 #Informacion {
@@ -279,10 +280,11 @@ section {
     transform: translate(2px, -2px);
 }
 
-.disabled{
+.disabled {
     cursor: not-allowed;
     opacity: 0.7;
-    pointer-events: none; /* Evita que se pueda hacer clic */
+    pointer-events: none;
+    /* Evita que se pueda hacer clic */
 }
 
 #Contacto {
@@ -302,44 +304,44 @@ section {
 #Formulario form {
     align-items: center;
     justify-content: center;
-    width: 30%;
-    max-width: 600px;
-    min-width: 200px;
+    width: 100%;
+    max-width: 500px;
+    min-width: 280px;
 }
 
 
 #Formulario input,
 #Formulario textarea {
     font-family: Nunito;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
     width: 100%;
     color: white;
     margin: 10px 0;
     border-radius: 4px;
     border: 2px solid white;
     background-color: transparent;
-    padding: 5px;
+    padding: 10px;
 }
 
 #Formulario input:focus,
 #Formulario textarea:focus {
     outline: none;
-    border-color: #ccc;
+    border-color: #5fa8d3;
 }
 
 textarea::placeholder,
 input::placeholder {
     font-family: Nunito;
-    font-size: 1rem;
-    color: white;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 #Redes {
     align-items: start;
     justify-content: center;
     padding: 1rem;
-    gap: 1rem;
-
+    gap: 2rem;
+    min-width: 200px;
 }
 
 #Redes a,
@@ -364,12 +366,17 @@ input::placeholder {
     background-color: #003f88;
 }
 
-
+#Redes > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
 
 footer {
     display: flex;
     flex-direction: row;
-    height: 10vh;
+    min-height: 10vh;
     padding: 1rem;
     align-items: center;
     text-align: center;
@@ -378,13 +385,15 @@ footer {
     color: white;
 }
 
-
-
+footer h4 {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    line-height: 1.4;
+}
 
 textarea {
     height: 25vh;
-    resize: none;
-    /* Desactivar redimensionamiento */
+    min-height: 100px;
+    resize: vertical;
     overflow: visible;
     /* Mostrar barras desplazadoras cuando sea necesario */
 }
@@ -429,5 +438,109 @@ textarea {
 
     100% {
         transform: translateX(-50%);
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 0.5rem;
+        flex-direction: column;
+        height: auto;
+        min-height: 80px;
+        gap: 0.5rem;
+    }
+    
+    header h1 {
+        margin-left: 0;
+    }
+    
+    nav ul {
+        gap: 10px;
+    }
+    
+    nav ul li {
+        margin-right: 5px;
+    }
+    
+    section {
+        padding: 100px 15px 60px;
+    }
+    
+    #Inicio {
+        padding: 120px 15px 60px;
+    }
+    
+    #SobreMi {
+        padding: 140px 15px 80px;
+    }
+    
+    .FlexRow {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .contenedorCards {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    
+    #Contacto {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 0.5rem;
+    }
+    
+    section {
+        padding: 100px 10px 40px;
+    }
+    
+    #Inicio {
+        padding: 120px 10px 40px;
+        gap: 20px;
+    }
+    
+    #SobreMi {
+        padding: 140px 10px 60px;
+    }
+    
+    #Informacion {
+        padding: 0 10px;
+    }
+    
+    .cardFlex {
+        height: 200px;
+    }
+    
+    .texto-card {
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+    
+    .texto-card p {
+        font-size: 0.8rem;
+    }
+    
+    #Formulario form {
+        min-width: 250px;
+    }
+    
+    .btnCeleste, .btnBlanco {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .carousel img {
+        height: 2.5rem;
+        margin: 0 15px;
+    }
+    
+    #Redes > div {
+        gap: 0.5rem;
     }
 }
